@@ -1,0 +1,84 @@
+.ToDo {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1.25rem;
+  background: var(--gray-400);
+  font-size: 0.875rem;
+  color: var(--gray-200);
+  border-radius: 8px;
+
+  animation: show 200ms normal;
+}
+
+@keyframes show {
+  from {
+    margin-top: -5rem;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  to {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.ToDo > div {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.95rem;
+}
+.check {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  color: var(--blue);
+}
+
+.check:hover {
+  color: var(--blue-dark);
+}
+
+.trash {
+  min-width: 1.3rem;
+  min-height: 1.3rem;
+  color: var(--gray-300);
+}
+
+.trash:hover {
+  color: var(--danger);
+}
+
+.checkCircle {
+  min-width: 1.5rem;
+  min-height: 1.5rem;
+  color: var(--gray-100);
+  background: var(--purple-dark);
+  padding: 0.22rem;
+  border-radius: 50%;
+}
+
+.checkCircle:hover {
+  background: var(--purple);
+}
+
+.textDone {
+  color: var(--gray-300);
+  text-decoration: line-through;
+}
+
+.hide {
+  animation: remove 100ms normal;
+}
+
+@keyframes remove {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    margin-top: -3rem;
+  }
+}
